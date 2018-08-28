@@ -20,3 +20,7 @@ var app1 = new Vue({
       seen = true
     }
 })
+function seen(seen)
+{
+document.seen=true;
+}
