@@ -9,8 +9,8 @@
       <script type="text/javascript" src="vue.js"></script>            
       <script type="text/javascript" src="jscript.js"></script>      
       <div>
-<input type=".button1" value="Przycisk zmiany koloru tła na zielony" onclick="kolor('green');">
-<input type=".button1" value="Przycisk zmiany koloru tła na biały" onclick="kolor('white');">
+<input type="button" value="Przycisk zmiany koloru tła na zielony" onclick="kolor('green');">
+<input type="button" value="Przycisk zmiany koloru tła na biały" onclick="kolor('white');">
             <br>
             <div id=app>
                   {{menu
@@ -20,7 +20,7 @@
                   }}
             </div>
             <div id="app-1">
-                  <input type=".button" value="1" v-if="seen" onclick="content();">
+                  <input type=".button" value="1" v-if="seen">
                           <span v-if="seen">Now you see me</span>
                   <input type=".button" value="2" onclick="content('true');">
                           <span v-if="seen">Now you see me2</span>
