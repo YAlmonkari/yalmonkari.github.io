@@ -13,7 +13,7 @@ var app = new Vue({
 var app1 = new Vue({
   el: '#app-1',
   data: {
-    seen: false
+    seen: true
   }
   methods: {
     content: function () {
