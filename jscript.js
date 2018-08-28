@@ -15,12 +15,8 @@ var app1 = new Vue({
   data: {
     seen: false
   }
-  methods: {
-    content: function () {
+methods: {
+    show: function () {
       seen = true
     }
 })
-function seen(seen)
-{
-document.seen=true;
-}
