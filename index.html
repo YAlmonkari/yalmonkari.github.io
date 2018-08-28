@@ -19,11 +19,15 @@
             </script>-->
                   }}
             </div>
-            <div>
-                  <input type=".button" value="1">
-                  <input type=".button" value="2">
-                  <input type=".button" value="3">
-                  <input type=".button" value="4">
+            <div id="app-3">
+                  <input type=".button" value="1" onclick="content('true');">
+                          <span v-if="seen">Now you see me</span>
+                  <input type=".button" value="2" onclick="content('true');">
+                          <span v-if="seen">Now you see me2</span>
+                  <input type=".button" value="3" onclick="content('true');">
+                          <span v-if="seen">Now you see me3</span>
+                  <input type=".button" value="4" onclick="content('true');">
+                          <span v-if="seen">Now you see me4</span>
             </div>
       </div>
 
