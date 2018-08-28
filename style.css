@@ -24,7 +24,7 @@ div {
 body {
     transition: background-color 2s;
     margin: 0px;
-    padding: 0px;
+/*    padding: 0px;    */
 }
 #myBar {
     width: 0%;
