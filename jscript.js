@@ -10,4 +10,13 @@ var app = new Vue({
     message: menu
   }
 })
-
+var app1 = new Vue({
+  el: '#app-1',
+  data: {
+    seen: false
+  }
+  methods: {
+    content: function () {
+      seen = true
+    }
+})
