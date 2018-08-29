@@ -6,13 +6,13 @@
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body bgcolor="white">
-      <script type="text/javascript" src="vue.js"></script>
       <script type="text/javascript" src="jscript.js"></script>
+      <script type="text/javascript" src="vue.js"></script>
   <div id="app">
     {{ message }}
     <p><div>
-<input type="button" value="Przycisk zmiany koloru tła na zielony" onclick="kolor('green');">
-<input type="button" value="Przycisk zmiany koloru tła na biały" onclick="kolor('white');"></p>
+    <input type="button" value="Przycisk zmiany koloru tła na zielony" onclick="kolor('green');">
+    <input type="button" value="Przycisk zmiany koloru tła na biały" onclick="kolor('white');"></div></p>
   </div>
   <script>
     var app = new Vue({
@@ -26,7 +26,7 @@ document.bgColor=kolor;
 }
                       })
   </script>
-      <span v-html="rawHtml"></span> 
+  <span v-html="rawHtml"></span> 
 </body>
 </html>
 <!DOCTYPE html>
