@@ -7,14 +7,25 @@
 </head>
 <body bgcolor="white">    
       <script type="text/javascript" src="vue.js"></script>            
-
+      <script type="text/javascript" src="jscript.js"></script>   
   <div id="app">
     {{ message }}
     <p><div>
 <input type="button" value="Przycisk zmiany koloru tła na zielony" onclick="kolor('green');">
 <input type="button" value="Przycisk zmiany koloru tła na biały" onclick="kolor('white');"></p>
   </div>
-      <script type="text/javascript" src="jscript.js"></script>   
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        message: 'Hello Vue!'
+      }
+    function kolor(kolor)
+{
+document.bgColor=kolor;
+}
+                      })
+  </script>
       <span v-html="rawHtml"></span> 
 </body>
 </html>
