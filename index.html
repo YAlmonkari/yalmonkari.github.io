@@ -8,12 +8,11 @@
 </head>
 <body bgcolor="white">
   <div id="app">
-    {{ message }}
-    {{ <p><div>
+    {{ message <p><div>
 <input type="button" value="Przycisk zmiany koloru tła na zielony" onclick="kolor('green');">
-<input type="button" value="Przycisk zmiany koloru tła na biały" onclick="kolor('white');"></p> }}
+<input type="button" value="Przycisk zmiany koloru tła na biały" onclick="kolor('white');"></p>
   </div>
-
+}}
   <script>
     var app = new Vue({
       el: '#app',
