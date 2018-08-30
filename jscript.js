@@ -2,7 +2,7 @@ function kolor(kolor)
 {
 document.bgColor=kolor;
 }
-function move() {
+/*function move() {
     var elem = document.getElementById("myBar");
     var width = 1;
     var id = setInterval(frame, 1);
@@ -15,8 +15,8 @@ function move() {
             elem.innerHTML = width * 1 + '%';
         }
     }
-}
-    var app = new Vue({
+}*/
+var app = new Vue({
   el: '#app',
   data: {
     message: 'Hello Vue!'
