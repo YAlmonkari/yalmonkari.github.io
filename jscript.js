@@ -4,7 +4,3 @@ var app = new Vue({
     message: 'Hello Vue!'
   }
 })
-function kolor(kolor)
-{
-document.bgColor=kolor;
-}
