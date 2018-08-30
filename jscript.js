@@ -1,3 +1,7 @@
+function kolor(kolor)
+{
+document.bgColor=kolor;
+}
 function move() {
     var elem = document.getElementById("myBar");
     var width = 1;
@@ -5,6 +9,7 @@ function move() {
     function frame() {
         if (width >= 100) {
             clearInterval(id);
+            document.barbgColor="white";
         } else {
             width++;
             elem.style.width = width + '%';
