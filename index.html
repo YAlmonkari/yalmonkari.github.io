@@ -7,7 +7,7 @@
             <script src="https://unpkg.com/vue"></script>
 </head>
 <body bgcolor="white">
-      <script type="text/javascript" src="vue.js"></script>
+     <-- <script type="text/javascript" src="vue.js"></script>-->
       <script type="text/javascript" src="jscript.js"></script>
   <div id="app">
     {{ message }}
@@ -20,6 +20,10 @@
   }
 
 })
+      function kolor(kolor)
+{
+document.bgColor=kolor;
+}
   </script>
   <p>
 <input type="button" value="Przycisk zmiany koloru tła na zielony" onclick="kolor('green');">
