@@ -12,9 +12,6 @@
   <div id="app">
     {{ message }}
   </div>
-  <p>
-<input type="button" value="Przycisk zmiany koloru tła na zielony" onclick="kolor('green');">
-<input type="button" value="Przycisk zmiany koloru tła na biały" onclick="kolor('white');">
-    </p>
+    <span v-html="rawHtml"></span>
 </body>
 </html>
