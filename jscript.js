@@ -9,11 +9,13 @@ function move() {
     function frame() {
         if (width >= 100) {
             clearInterval(id);
-            document.barbgColor="white";
         } else {
             width++;
             elem.style.width = width + '%';
             elem.innerHTML = width * 1 + '%';
+        }
+        if (width = 100) {
+            document.barbgColor="white";
         }
     }
 }
