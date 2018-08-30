@@ -9,7 +9,6 @@ function move() {
     function frame() {
         if (width >= 100) {
             clearInterval(id);
-            document.bgColor="white";
         } else {
             width++;
             elem.style.width = width + '%';
