@@ -10,7 +10,7 @@ function move() {
         if (width >= 100) {
             clearInterval(id);
         } 
-        if (width = 100)
+        if (id = 100)
             document.bgColor="white";
         }
         else {
