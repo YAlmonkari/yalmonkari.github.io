@@ -14,7 +14,9 @@
 <button onclick="move()">Click Me</button> 
 </div>-->
   <div id="app">
+    <span v-bind:title="messageLoadTime">
     {{ message }}
+    </span>
   </div>
   <script>
     var app = new Vue({
