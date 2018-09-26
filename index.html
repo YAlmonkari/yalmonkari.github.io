@@ -14,7 +14,7 @@
 <button onclick="move()">Click Me</button> 
 </div>-->
   <div id="app">
-      <span id="app-2" v-bind:title="title">
+      <span id="app-2" v-if="seen" v-bind:title="title">
     {{ message }}
       </span>
   </div>
@@ -23,6 +23,7 @@
   el: '#app',
   data: {
     message: 'Hello Vue!'
+    seen: true
   }
 })
     var app2 = new Vue({
