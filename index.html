@@ -14,11 +14,9 @@
 <button onclick="move()">Click Me</button> 
 </div>-->
   <div id="app">
-    <div id="app-2">
       <span v-bind:title="title">
     {{ message }}
       </span>
-    </div>
   </div>
   <script>
     var app = new Vue({
@@ -27,8 +25,8 @@
     message: 'Hello Vue!'
   }
 })
-    var app2 = new Vue({
-  el: '#app-2',
+    var app = new Vue({
+  el: '#app',
   data: {
     title: 'You loaded this page on ' + new Date().toLocaleString()
   }
