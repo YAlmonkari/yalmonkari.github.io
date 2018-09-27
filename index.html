@@ -69,35 +69,19 @@ new Vue({
 <input type="button" value="Przycisk zmiany koloru tła na zielony" onclick="kolor('green');">
 <input type="button" value="Przycisk zmiany koloru tła na biały" onclick="kolor('white');">
 </div>
-   <div id="menu"class="row">  
-  <ul class="menu">
-    <li class="menu__item">
-        <a class="menu__link" href="#">Home</a>
-    </li>
-
-    <li class="menu__item menu__item--dropdown" v-on:click="toggle('ranking')" v-bind:class="{'open' : dropDowns.ranking.open}">
-        <a class="menu__link menu__link--toggle" href="#">
-            <span>Rangliste</span>
-            <i class="menu__icon fa fa-angle-down"></i>
-        </a>
-
-        <ul class="dropdown-menu">
-            <li class="dropdown-menu__item">
-                <a class="dropdown-menu__link" href="#">Aktuelle Runde</a>
-            </li>
-
-            <li class="dropdown-menu__item">
-                <a class="dropdown-menu__link" href="#">Siegerliste</a>
-            </li>
-        </ul>
-    </li>
-
-    <li class="menu__item">
-        <a class="menu__link" href="#">Belegungskalender</a>
-    </li>
-</ul>
+<div id="main">
+  <nav v-bind:class="active" v-on:click.prevent>
+    <a href="#" class="home" v-on:click="makeActive('home')">Home</a>
+    <a href="#" class="projects" v-on:click="makeActive('projects')">Projects</a>
+    <a href="#" class="services" v-on:click="makeActive('services')">Services</a>
+    <a href="#" class="contact" v-on:click="makeActive('contact')">Contact</a>
+  </nav>
   
-  <pre>{{ dropDowns | json }}</pre>
+  <p>You chose <b>{{ active }}</b></p>
 </div>
+
+<div class="resource">
+resource: <a href="http://tutorialzine.com/2016/03/5-practical-examples-for-learning-vue-js/" target="_blank">5 Practical Examples For Learning Vue.js</a>
+ </div>
 </body>
 </html>
