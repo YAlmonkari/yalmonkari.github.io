@@ -2,7 +2,7 @@
   cursor: pointer;
 }
 .bold {
-  font-weight: bold;
+  font-weight: normal;
 }
 ul {
   padding-left: 1em;
