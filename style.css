@@ -132,3 +132,6 @@ p b{
     display: inline-block;
     font-size: 16px;
 }
+li {
+    text-align: left;
+}
