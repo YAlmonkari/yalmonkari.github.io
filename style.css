@@ -41,11 +41,9 @@ nav{
 
 nav a{
     display:inline-block;
-    color:#fff !important;
-    font-weight:bold;
-    font-size:10px;
+    color:#ffffff !important;
     text-decoration:none !important;
-    line-height:1;
+    line-height:0;
     background-color:transparent;
 
     -webkit-transition:background-color 0.25s;
@@ -54,11 +52,11 @@ nav a{
 }
 
 nav a:first-child{
-    border-radius:2px 0 0 2px;
+    border-radius:0px 0 0 0px;
 }
 
 nav a:last-child{
-    border-radius:0 2px 2px 0;
+    border-radius:0 0px 0px 0;
 }
 
 nav.home .home,
@@ -69,8 +67,6 @@ nav.contact .contact{
 }
 
 p{
-    font-size:10px;
-    font-weight:bold;
     color: #000000;
 }
 
@@ -78,10 +74,9 @@ p b{
     color: #000000;
     display:inline-block;
     background-color:#ffffff;
-    font-size:10px;
 }
 .resource {
-  margin: 20px 0;
+  margin: 0px 0;
 }
 #myBar {
     width: 0%;
