@@ -21,6 +21,12 @@
 <input type="button" value="Przycisk zmiany koloru tła na zielony" onclick="kolor('green');">
 <input type="button" value="Przycisk zmiany koloru tła na biały" onclick="kolor('white');">
 </div>
+<!-- list element -->
+<ul id="menu">
+  <li v-for="item in items">
+    {{ item.message }}
+  </li>
+</ul>
 <!-- item template -->
 <script type="text/x-template" id="item-template">
   <li>
@@ -61,7 +67,17 @@
 {
 document.bgColor=kolor;
 }
-// demo data
+//menu list
+var manu = new Vue({
+  el: '#menu',
+  data: {
+    items: [
+      { message: 'opcja1' },
+      { message: 'opcja1' }
+    ]
+  }
+})
+      // demo data
 var data = {
   name: 'Webpage'
 }
