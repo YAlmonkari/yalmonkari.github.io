@@ -21,23 +21,8 @@
 <input type="button" value="Przycisk zmiany koloru tła na zielony" onclick="kolor('green');">
 <input type="button" value="Przycisk zmiany koloru tła na biały" onclick="kolor('white');">
 </div>
-<ul id="demo">
-  <item
-    class="item"
-    :model="treeData">
-  </item>
-</ul>
-<script>
-    var app = new Vue({
-  el: '#app',
-  data: {
-    message: 'Hello Vue!'
-  }
-})
-    function kolor(kolor)
-{
-document.bgColor=kolor;
-}
+<!-- item template -->
+<script type="text/x-template" id="item-template">
   <li>
     <div
       :class="{bold: isFolder}"
@@ -56,6 +41,29 @@ document.bgColor=kolor;
       <li class="add" @click="addChild">+</li>
     </ul>
   </li>
+</script>
+
+<p>(You can double click on an item to turn it into a folder.)</p>
+
+<!-- the demo root element -->
+<ul id="demo">
+  <item
+    class="item"
+    :model="treeData">
+  </item>
+</ul>
+
+<script>
+    var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!'
+  }
+})
+    function kolor(kolor)
+{
+document.bgColor=kolor;
+}
 // demo data
 var data = {
   name: 'My Tree',
