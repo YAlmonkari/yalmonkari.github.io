@@ -29,7 +29,7 @@
       @click="toggle"
       @dblclick="changeType">
       {{ model.name }}
-      <span v-if="isFolder">[{{ open ? '-' : '+' }}]</span>
+      <span v-if="isFolder">[{{ open ? 'colapse' : 'open folder' }}]</span>
     </div>
     <ul v-show="open" v-if="isFolder">
       <item
@@ -63,28 +63,7 @@ document.bgColor=kolor;
 }
 // demo data
 var data = {
-  name: 'Menu',
-  children: [
-    { name: 'hello' },
-    {
-      name: 'child folder',
-      children: [
-        {
-          name: 'child folder',
-          children: [
-            { name: 'hello' },
-          ]
-        },
-        { name: 'hello' },
-        {
-          name: 'child folder',
-          children: [
-            { name: 'hello' },
-          ]
-        }
-      ]
-    }
-  ]
+  name: 'Menu'
 }
 
 // define the item component
