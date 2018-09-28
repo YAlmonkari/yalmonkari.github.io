@@ -41,7 +41,7 @@ nav{
 
 nav a{
     display:inline-block;
-    color:#ffffff !important;
+    color:#000000 !important;
     text-decoration:none !important;
     line-height:0;
     background-color:transparent;
