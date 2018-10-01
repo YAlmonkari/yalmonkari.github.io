@@ -23,13 +23,13 @@
 </div>
 <div id="todo-list-example">
   <form v-on:submit.prevent="addNewTodo">
-    <label for="new-todo">Add a todo</label>
+    <label for="new-todo">dodaja coś</label>
     <input
       v-model="newTodoText"
       id="new-todo"
-      placeholder="E.g. Feed the cat"
+      placeholder="nowa opcja"
     >
-    <button>Add</button>
+    <button>Dodaj</button>
   </form>
   <ul>
     <li
@@ -57,7 +57,7 @@ Vue.component('todo-item', {
   template: '\
     <li>\
       {{ title }}\
-      <button v-on:click="$emit(\'remove\')">Remove</button>\
+      <button v-on:click="$emit(\'remove\')">Skasuj</button>\
     </li>\
   ',
   props: ['title']
@@ -69,15 +69,15 @@ new Vue({
     todos: [
       {
         id: 1,
-        title: 'Do the dishes',
+        title: 'opcja1',
       },
       {
         id: 2,
-        title: 'Take out the trash',
+        title: 'opcja2',
       },
       {
         id: 3,
-        title: 'Mow the lawn'
+        title: 'opcja3'
       }
     ],
     nextTodoId: 4
