@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+  </head>
+<body>
+  <div id="main">
+    <h1>{{ title }}</h1>
+    <ul id="example-1">
+      <li v-for="item in items"> {{ item }} <- oto element listy</li>
+    </ul>
+  </div>
+</body>
+<script>
+  document.addEventListener("DOMContentLoaded", 
+    ()=> {
+      new Vue({
+        el: '#main',
+        data: {
+          title: 'Tytuł',
+          items: [
+            "raz",
+            "dwa",
+            "trzy"
+          ]
+        }
+      })
+    }
+  )
+</script>
+</html>
