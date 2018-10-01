@@ -75,7 +75,6 @@
     :model="treeData">
   </item>
 </ul>
-
 <script>
     var app = new Vue({
   el: '#app',
@@ -100,7 +99,6 @@ var manu = new Vue({
 var data = {
   name: 'Webpage'
 }
-
 // define the item component
 Vue.component('item', {
   template: '#item-template',
@@ -138,7 +136,6 @@ Vue.component('item', {
     }
   }
 })
-
 // boot up the demo
 var demo = new Vue({
   el: '#demo',
@@ -162,15 +159,15 @@ new Vue({
     todos: [
       {
         id: 1,
-        title: '<a href=index2.html>link</a>',
+        title: 'link',
       },
       {
         id: 2,
-        title: '<a href=index2.html>link2</a>',
+        title: 'link2',
       },
       {
         id: 3,
-        title: '<a href=index2.html>link3</a>'
+        title: 'link3'
       }
     ],
     nextTodoId: 4
