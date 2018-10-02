@@ -38,6 +38,7 @@
       v-bind:key="todo.id"
       v-bind:title="todo.title"
       v-on:remove="todos.splice(index, 1)"
+      v-on:click="app2.seen = true"
     ></li>
   </ul>
 </div>
