@@ -42,13 +42,13 @@
     ></li>
   </ul>
 </div>
-<div>
-  <button v-on:click="seen = true">...</button>
-</div>
 <div id="app-2">
+  <button v-on:click="app2.seen = true">...</button>
   <span v-if="seen">Now you see me</span>
 </div>
 <script>
+  document.addEventListener("DOMContentLoaded", 
+    ()=> {
     var app = new Vue({
   el: '#app',
   data: {
@@ -105,6 +105,8 @@ var app2 = new Vue({
     seen: false
   }
 })
+}
+)
 </script>
 </body>
 </html>
