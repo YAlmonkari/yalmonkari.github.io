@@ -43,7 +43,7 @@
   </ul>
 </div>
 <div id="app-2">
-  <button v-on:click="app2.seen = true">...</button>
+  <button onclick="seen()">...</button>
   <span v-if="seen">Now you see me</span>
 </div>
 <script>
@@ -59,6 +59,10 @@
     function kolor(kolor)
 {
 document.bgColor=kolor;
+}
+     function seen()
+{
+app2.seen=!app2.seen;
 }
 Vue.component('todo-item', {
   template: '\
