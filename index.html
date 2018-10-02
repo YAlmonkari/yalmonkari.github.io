@@ -41,12 +41,15 @@
     ></li>
   </ul>
 </div>
+<div id="content">
+  <span v-if="seen">Now you see me</span>
+</div>
 <script>
     var app = new Vue({
   el: '#app',
   data: {
     message: 'Hello Vue!',
-    title: 'You loaded this page on ' + new Date().toLocaleString()
+    title: 'Strona załadowała się ' + new Date().toLocaleString()
   }
 })
     function kolor(kolor)
@@ -90,6 +93,12 @@ new Vue({
       })
       this.newTodoText = ''
     }
+  }
+})
+var content = new Vue({
+  el: '#content',
+  data: {
+    seen: false
   }
 })
 </script>
