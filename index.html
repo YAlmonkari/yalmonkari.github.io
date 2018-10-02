@@ -14,7 +14,7 @@
 <br>
 <button onclick="move()">Click Me</button> 
 </div>-->
-  <div id="app">
+  <div id="app" v-bind:title="title">
     {{ message }}
   </div>
   <div>
@@ -45,7 +45,8 @@
     var app = new Vue({
   el: '#app',
   data: {
-    message: 'Hello Vue!'
+    message: 'Hello Vue!',
+    title: 'You loaded this page on ' + new Date().toLocaleString()
   }
 })
     function kolor(kolor)
