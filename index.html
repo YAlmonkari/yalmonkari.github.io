@@ -22,6 +22,7 @@
 <input type="button" value="Przycisk zmiany koloru tła na biały" onclick="kolor('white');">
 </div>
 <div id="todo-list-example">
+  <!-- the submit event will no longer reload the page -->
   <form v-on:submit.prevent="addNewTodo">
     <label for="new-todo">dodaja coś</label>
     <input
@@ -42,10 +43,14 @@
     ></li>
   </ul>
 </div>
-  <!-- znikający napis -->
+  <!-- znikający napis
 <div id="app-2">
   <input type="button" value="...">
   <span v-if="seen">...</span>
+</div> -->
+  <!-- tabela -->
+<div id="tabela">
+
 </div>
 <script>
   document.addEventListener("DOMContentLoaded", 
@@ -110,6 +115,13 @@ var app2 = new Vue({
     seen: true
   }
 })
+var tabela = new Vue({
+  el: '#tabela',
+  data: [
+    {"raz", "dwa"}
+    ]
+})
+/* DOMContentLoaded */ 
 }
 )
 </script>
