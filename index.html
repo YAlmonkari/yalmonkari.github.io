@@ -1,24 +1,24 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>My first Vue app</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="style.css" />
-</head>
-<body bgcolor="white">
- <!--<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>-->
-  <script src="vue.js"></script>
-  <script type="text/javascript" src="jscript.js"></script>
-<!--<div id="myProgress">
-  <div id="myBar">1%</div>
-<br>
-<button onclick="move()">Click Me</button> 
-</div>-->
-  <div id="app" v-bind:title="title">
-    {{ message }}
-  </div>
-  <div>
-<input type="button" value="Przycisk zmiany koloru tła na zielony" onclick="kolor('green');">
+ <!DOCTYPE html>
+ <html>
+ <head>
+   <title>My first Vue app</title>
+     <meta charset="UTF-8">
+     <link rel="stylesheet" type="text/css" href="style.css" />
+ </head>
+ <body bgcolor="white">
+  <!--<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>-->
+   <script src="vue.js"></script>
+   <script type="text/javascript" src="jscript.js"></script>
+ <!--<div id="myProgress">
+   <div id="myBar">1%</div>
+ <br>
+ <button onclick="move()">Click Me</button> 
+ </div>-->
+   <div id="app" v-bind:title="title">
+     {{ message }}
+   </div>
+   <div>
+ <input type="button" value="Przycisk zmiany koloru tła na zielony" onclick="kolor('green');">
 <input type="button" value="Przycisk zmiany koloru tła na biały" onclick="kolor('white');">
 </div>
 <div id="todo-list-example">
@@ -26,89 +26,93 @@
   <form v-on:submit.prevent="addNewTodo">
     <label for="new-todo">dodaja coś</label>
     <input
-      v-model="newTodoText"
-      id="new-todo"
-      placeholder="nowa opcja"
-    >
-    <button>Dodaj</button>
-  </form>
-  <ul>
-    <li
-      is="todo-item"
-      v-for="(todo, index) in todos"
-      v-bind:key="todo.id"
-      v-bind:title="todo.title"
-      v-on:remove="todos.splice(index, 1)"
-      v-on:click="app2.seen = true"
+       v-model="newTodoText"
+       id="new-todo"
+       placeholder="nowa opcja"
+     >
+     <button>Dodaj</button>
+   </form>
+   <ul>
+     <li
+       is="todo-item"
+       v-for="(todo, index) in todos"
+       v-bind:key="todo.id"
+       v-bind:title="todo.title"
+       v-on:remove="todos.splice(index, 1)"
+       v-on:click="app2.seen = true"
     ></li>
   </ul>
 </div>
-  <!-- znikający napis -->
+  <!-- znikający napis
 <div id="app-2">
+  <input type="button" value="...">
   <span v-if="seen">...</span>
-</div>
+</div> -->
   <!-- tabela -->
 <div id="tabela">
-
 </div>
 <script>
   document.addEventListener("DOMContentLoaded", 
-    ()=> {
-    var app = new Vue({
-  el: '#app',
-  data: {
-    message: 'Hello Vue!',
-    title: 'Strona załadowała się ' + new Date().toLocaleString()
-  }
-})
-    function kolor(kolor)
-{
-document.bgColor=kolor;
-}
-Vue.component('todo-item', {
-  template: '\
-    <li>\
-      {{ title }}\
-      <button v-on:click="$emit(\'remove\')">Skasuj</button>\
-    </li>\
-  ',
-  props: ['title']
-})
-new Vue({
-  el: '#todo-list-example',
-  data: {
-    newTodoText: '',
-    todos: [
-      {
-        id: 1,
-        title: 'opcja1',
-      },
-      {
-        id: 2,
-        title: 'opcja2',
-      },
-      {
-        id: 3,
-        title: 'opcja3'
-      }
-    ],
-    nextTodoId: 4
-  },
-  methods: {
-    addNewTodo: function () {
-      this.todos.push({
-        id: this.nextTodoId++,
-        title: this.newTodoText
-      })
-      this.newTodoText = ''
-    }
-  }
-})
-var app2 = new Vue({
-  el: '#app-2',
-  data: {
+     ()=> {
+     var app = new Vue({
+   el: '#app',
+   data: {
+     message: 'Hello Vue!',
+     title: 'Strona załadowała się ' + new Date().toLocaleString()
+   }
+ })
+     function kolor(kolor)
+ {
+ document.bgColor=kolor;
+ }
+      function seen(value)
+ {
+ app2.seen=value;
+ }
+ Vue.component('todo-item', {
+   template: '\
+     <li>\
+       {{ title }}\
+       <button v-on:click="$emit(\'remove\')">Skasuj</button>\
+     </li>\
+   ',
+   props: ['title']
+ })
+ new Vue({
+   el: '#todo-list-example',
+   data: {
+     newTodoText: '',
+     todos: [
+       {
+         id: 1,
+         title: 'opcja1',
+       },
+       {
+         id: 2,
+         title: 'opcja2',
+       },
+       {
+         id: 3,
+         title: 'opcja3'
+       }
+     ],
+     nextTodoId: 4
+   },
+   methods: {
+     addNewTodo: function () {
+       this.todos.push({
+         id: this.nextTodoId++,
+         title: this.newTodoText
+       })
+       this.newTodoText = ''
+     }
+   }
+ })
+ var app2 = new Vue({
+   el: '#app-2',
+   data: {
     seen: true
-}
+  }
 })
 var tabela = new Vue({
   el: '#tabela',
@@ -120,5 +124,5 @@ var tabela = new Vue({
 }
 )
 </script>
-</body>
+ </body>
 </html>
