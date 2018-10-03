@@ -43,11 +43,11 @@
     ></li>
   </ul>
 </div>
-  <!-- znikający napis
+  <!-- znikający napis -->
 <div id="app-2">
-  <input type="button" value="...">
+   <button type="button" v-on:click="seen">...</button>
   <span v-if="seen">...</span>
-</div> -->
+</div>
   <!-- tabela -->
 <div id="tabela">
 
@@ -66,9 +66,9 @@
 {
 document.bgColor=kolor;
 }
-     function seen(value)
+     function seen()
 {
-app2.seen=value;
+seen=false;
 }
 Vue.component('todo-item', {
   template: '\
