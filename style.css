@@ -31,6 +31,8 @@ a, a:visited {
     outline:none;
     /*color:#389dc1;*/
     color: #000000;
+    font-style: normal;
+    
 }
 
 a:hover{
