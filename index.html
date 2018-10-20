@@ -3,7 +3,6 @@
  <head>
    <title>My first Vue app</title>
      <meta charset="UTF-8">
-   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
      <link rel="stylesheet" type="text/css" href="style.css" />
  </head>
  <body bgcolor="white">
@@ -52,29 +51,9 @@
   <!-- tabela -->
 <div id="tabela">
 </div>
-  <hr />
-      <div id="main">
-    <h1>{{ title }}</h1>
-    <ul id="example-1">
-      <li v-for="item in items"> {{ item }} </li>
-    </ul>
-  </div>
 <script>
   document.addEventListener("DOMContentLoaded", 
     ()=> {
-         new Vue({
-        el: '#main',
-        data: {
-          title: 'Tytuł',
-          items: [
-            "raz",
-            "dwa",
-            "trzy"
-          ]
-        }
-      })
-    }
-  )
     var app = new Vue({
   el: '#app',
   data: {
