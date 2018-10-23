@@ -44,6 +44,20 @@ section, footer, header, aside, nav{
 }
 
 /*-------------------------
+     monospace
+--------------------------*/
+
+#opis {
+    font-family: monospace;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 14px;
+    text-align: center;
+}
+
+/*-------------------------
     The menu
 --------------------------*/
 
