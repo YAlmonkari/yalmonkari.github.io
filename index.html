@@ -57,9 +57,8 @@
   <hr color="red" align="center">
   <!-- html -->
 <div id="opis">
- <p><marquee>Warszawa to nie jest ładne miasto.
+ <p><marquee>Warszawa to nie jest ładne miasto.</marquee>
   <br>...
-    </marquee>
  </p>
  <p></p>
   </div>
@@ -112,7 +111,7 @@ new Vue({
     todos: [
       {
         id: 1,
-        title: 'opcja1',
+        title: 'opcja1' + '<span v-html="rawHtml"></span>',
       },
       {
         id: 2,
