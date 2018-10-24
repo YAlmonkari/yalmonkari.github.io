@@ -57,7 +57,10 @@
   <hr color="red" align="center">
   <!-- html -->
 <div id="opis">
- <p><marquee>Warszawa to nie jest ładne miasto.</marquee></p>
+ <p><marquee>Warszawa to nie jest ładne miasto.
+  <br>...
+    </marquee>
+ </p>
  <p></p>
   </div>
   <hr color="red" align="center">
@@ -81,7 +84,8 @@
   el: '#app',
   data: {
     message: 'Hello Vue!',
-    title: 'Strona załadowała się ' + new Date().toLocaleString()
+    title: 'Strona załadowała się ' + new Date().toLocaleString(),
+    rawHTML: '<button type="button">' + todo-list-example.todo.title + '</button>'
   }
 })
     function kolor(kolor)
