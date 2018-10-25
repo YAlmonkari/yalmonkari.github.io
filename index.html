@@ -42,6 +42,7 @@
        is="todo-item"
        v-for="(todo, index) in todos"
        v-bind:key="todo.id"
+       v-html="rawHtml"
        v-bind:title="todo.title"
        v-on:remove="todos.splice(index, 1)"
        v-on:click="app2.seen = true"
@@ -91,8 +92,7 @@
   el: '#app',
   data: {
     message: 'Hello Vue!',
-    title: 'Strona załadowała się ' + new Date().toLocaleString(),
-    rawHTML: '<button type="button"></button>'
+    title: 'Strona załadowała się ' + new Date().toLocaleString()
   }
 })
     function kolor(kolor)
@@ -115,6 +115,7 @@ Vue.component('todo-item', {
 new Vue({
   el: '#todo-list-example',
   data: {
+    rawHtml: '<button type="button">' + this.todos.title + '</button>',
     newTodoText: '',
     todos: [
       {
