@@ -43,11 +43,11 @@
        v-for="(todo, index) in todos"
        v-bind:key="todo.id"
        v-html="rawHtml"
-       v-bind:title="todo.title"
        v-on:remove="todos.splice(index, 1)"
        v-on:click="app2.seen = true"
     ></li>
-  </ul>
+<!--       v-bind:title="todo.title" -->
+ </ul>
 </div>
   <!-- znikający napis -->
 <div id="app-2">
