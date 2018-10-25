@@ -42,11 +42,11 @@
        is="todo-item"
        v-for="(todo, index) in todos"
        v-bind:key="todo.id"
+       v-bind:title="todo.title"
        v-html="rawHtml"
        v-on:remove="todos.splice(index, 1)"
        v-on:click="app2.seen = true"
     ></li>
-<!--       v-bind:title="todo.title" -->
  </ul>
 </div>
   <!-- znikający napis -->
@@ -115,7 +115,7 @@ Vue.component('todo-item', {
 new Vue({
   el: '#todo-list-example',
   data: {
-    rawHtml: '<button type="button">' + todo.title + '</button>',
+    rawHtml: '<button type="button">' + this.title + '</button>',
     newTodoText: '',
     todos: [
       {
