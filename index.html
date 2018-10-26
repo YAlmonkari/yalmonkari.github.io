@@ -45,15 +45,14 @@
        v-bind:title="todo.title"
        v-on:remove="todos.splice(index, 1)"
        v-on:click="app2.seen = true"
-    ><span v-html="rawHtml"></span></li>
-    <!-- v-bind:title="todo.title"
-        -->
+    ></li>
  </ul>
 </div>
   <!-- znikający napis -->
 <div id="app-2">
 <!--  <input type="button" value="...">  -->
-  <span v-if="seen">...</span>
+ <span v-html="rawHtml"></span> 
+ <span v-if="seen">...</span>
 </div>
   <!-- tabela -->
 <div id="tabela">
@@ -132,7 +131,7 @@ Vue.component('todo-item', {
 new Vue({
   el: '#todo-list-example',
   data: {
-    rawHtml: '<input is="todo-item" v-bind:key="todo.id" v-bind:title="todo.title" type="button" class="w3-btn w3-tiny w3-ripple w3-blue"></button>',
+    rawHtml: '<input is="todo-item" v-bind:key="todo.id" v-bind:title="todo.title" type="button" class="w3-btn w3-tiny w3-ripple w3-blue">',
     newTodoText: '',
     todos: [
       {
