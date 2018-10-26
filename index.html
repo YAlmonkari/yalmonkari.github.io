@@ -26,7 +26,7 @@
  <input type="button" value="Przycisk zmiany koloru tła na zielony" onclick="kolor('green');">
 <input type="button" value="Przycisk zmiany koloru tła na biały" onclick="kolor('white');">
 </div>
-<div id="todo-list-example">
+<div id="todo-list">
   <!-- the submit event will no longer reload the page -->
   <form v-on:submit.prevent="addNewTodo">
     <label for="new-todo">dodaja coś</label>
@@ -46,12 +46,12 @@
        v-on:remove="todos.splice(index, 1)"
        v-on:click="app2.seen = true"
     ></li>
+    <span v-for="(todo, index) in todos" v-html="rawHtml"></span>
  </ul>
 </div>
   <!-- znikający napis -->
 <div id="app-2">
 <!--  <input type="button" value="...">  -->
- <span v-html="rawHtml"></span> 
  <span v-if="seen">...</span>
 </div>
   <!-- tabela -->
@@ -129,7 +129,7 @@ Vue.component('todo-item', {
   props: ['title']
 })
 new Vue({
-  el: '#todo-list-example',
+  el: '#todo-list',
   data: {
     rawHtml: '<input is="todo-item" v-bind:key="todo.id" v-bind:title="todo.title" type="button" class="w3-btn w3-tiny w3-ripple w3-blue">',
     newTodoText: '',
