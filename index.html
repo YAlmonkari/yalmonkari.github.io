@@ -132,7 +132,7 @@ Vue.component('todo-item', {
 new Vue({
   el: '#todo-list-example',
   data: {
-    rawHtml: '<button class="w3-btn w3-ripple w3-blue"> v-bind:title="todo.title" </button>',
+    rawHtml: '<input type="button" value="todo.title" class="w3-btn w3-tiny w3-ripple w3-blue" v-bind:title="todo.title"></button>',
     newTodoText: '',
     todos: [
       {
