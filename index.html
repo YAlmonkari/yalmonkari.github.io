@@ -46,7 +46,7 @@
        v-on:remove="todos.splice(index, 1)"
        v-on:click="app2.seen = true"
     ></li>
-    <span v-for="(todo, index) in todos" v-html="rawHtml"></span>
+    <p><span v-for="(todo, index) in todos" v-html="rawHtml"></span></p>
  </ul>
 </div>
   <!-- znikający napis -->
