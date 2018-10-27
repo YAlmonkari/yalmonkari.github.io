@@ -46,8 +46,6 @@
        v-on:remove="todos.splice(index, 1)"
        v-on:click="app2.seen = true"
     ></li>
-    <p><span v-for="(todo, index) in todos" v-html="rawHtml" v-bind:key="todo.id" v-bind:title="todo.title"></span>
-     <span v-html="buttonHtml"></span></p>
  </ul>
 </div>
   <!-- znikający napis -->
@@ -133,8 +131,6 @@ Vue.component('todo-item', {
 new Vue({
   el: '#todo-list',
   data: {
-    rawHtml: '<button is="todo-item" type="button" class="w3-btn w3-tiny w3-ripple w3-blue">',
-    buttonHtml: '</button>',
     newTodoText: '',
     todos: [
       {
