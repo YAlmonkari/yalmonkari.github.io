@@ -1,22 +1,24 @@
- <!DOCTYPE html>
- <html lang="pl-PL">
+  <!DOCTYPE html>
+ <html>
  <head>
    <title>My first Vue app</title>
      <meta name="viewport" content="width=device-width, initial-scale=1">
      <meta charset="UTF-8">
      <link rel="stylesheet" type="text/css" href="w3.css" />
  </head>
-   <body bgcolor="white">
+ <body bgcolor="white">
+  <header>
+   
+  </header>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <!--<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>-->
   <!-- <script src="vue.js"></script>-->
    <script type="text/javascript" src="jscript.js"></script>
- <!--  Pasek zaladowania strony / pracy przegladarki  -->
-   <div id="myProgress">
+ <!--<div id="myProgress">
    <div id="myBar">1%</div>
  <br>
  <button onclick="move()">Click Me</button> 
- </div>
+ </div>-->
    <div id="app" v-bind:title="title">
      {{ message }}
    </div>
@@ -25,7 +27,7 @@
 <input type="button" value="Przycisk zmiany koloru tła na biały" onclick="kolor('white');">
 </div>
 <div id="todo-list">
-  <!-- the submit event will no longer reload the page / klikniecie przycisku nie powoduje odswierzania strony -->
+  <!-- the submit event will no longer reload the page -->
   <form v-on:submit.prevent="addNewTodo">
     <label for="new-todo">dodaja coś</label>
     <input
@@ -61,19 +63,44 @@
     <button type="button" class="w3-btn w3-tiny w3-ripple w3-blue">Button</button>
   </div>
   <hr>
-  <!-- html --><!-- przesuwający się napis, v-if seen.
-<div id="opis" v-if="seen">
+  <!-- html -->
+<div id="opis">
  <p><marquee>Warszawa to nie jest ładne miasto.</marquee></p>
+ <p>Lorem ipsum dolor sit amet, ex ius iriure efficiendi reprehendunt. Consulatu laboramus ut duo. Accusam volutpat ex mea. Eu ius equidem referrentur. In mel audiam facilisis, dico persius intellegat eam ut, pro ex mutat percipit eleifend. Vim ex diam omittantur complectitur.
+
+Munere nonumy rationibus vel an, eum natum possim disputationi at, sea et adhuc tibique accusamus. Quo omnesque quaerendum an. At sit brute graecis, munere nominati no vim. Sea tantas sapientem ea, ludus epicurei facilisi pri no, ad mei quis ipsum. Purto case idque usu te, per wisi ludus an.
+
+Vel ea nostro democritum adipiscing. Ne libris meliore has, cu nam putent audiam, ne vis utinam aliquip. Malis epicuri voluptatum ei mel, eos equidem nusquam tractatos ne. Modo numquam definitiones an eum, vim meliore adolescens ad, cibo consetetur per eu.
+
+Modus deserunt cum ut. Vel ei omnes scaevola voluptatum, qui sint voluptatum te, liber qualisque id quo. Qui no affert praesent dissentiunt. Causae copiosae an est, et vis duis temporibus persequeris. An sumo tractatos urbanitas mei, in choro lucilius mediocritatem mea. Vel ornatus labores omittam ei, nec an commodo necessitatibus, eu vix omnes interpretaris. Vocent animal an eos, ut illud tempor sapientem per.
+
+Per et tollit definiebas eloquentiam. Referrentur repudiandae vel no. Pertinacia rationibus mei no, bonorum vivendo moderatius has eu, mel in mazim mandamus. Stet tamquam alterum mel cu, an duo fuisset eligendi percipit. His te ludus graece quaerendum.
+
+In assum virtute voluptatibus eum, te ius justo evertitur. Te homero altera sit, dico mandamus has id, et vero ludus pro. Usu eu tempor laoreet adipisci. Ne everti debitis vim. Eu has aeque paulo disputando, sonet persius disputationi ei pro.
+
+Tamquam inermis ea mel, modus iisque eu nec, cu eam agam purto scribentur. At mel saepe splendide, mei no saepe oporteat similique. Mundi dolorem quaestio usu an, per id debitis facilisi. Ne splendide conceptam sed. Incorrupte contentiones concludaturque ad cum.
+
+Sed te prima porro, per an vide decore delicatissimi, quo ut dolorum splendide evertitur. Vis an epicuri ponderum, nemore verterem cum te. Eum quem molestiae omittantur at, cibo temporibus mea ex, vel aliquip deseruisse moderatius et. Nibh inermis nominavi ius id, eripuit civibus ocurreret eam eu, eu ius aliquip delicatissimi. Ne dolor quidam quodsi vix, id esse vocent sapientem eos.
+
+Meis simul quodsi mea eu, ex his mucius iriure appellantur. Nisl ubique ea mel, an sed cibo habeo accusam, ut eos oporteat voluptatum. Vis id eros ignota, cu etiam errem per. Pri ignota impedit salutandi cu, et per soleat bonorum elaboraret, mea prima verterem assentior no. Ea nobis nostro detraxit has, ad ius tota option consectetuer, dicit numquam has ad. Postea omittantur neglegentur an vix. Eros utroque pro at.
+
+An vis ludus oportere facilisis. Vim an quas reque, esse sale ignota nam ea. Te eos nominavi prodesset. Ex pro sumo voluptaria, qualisque inciderint concludaturque mea id.
+ </p>
   </div>
-  <hr color="red">-->
+  <hr color="red">
   <footer>
-<p>  <a title="By daPhyre [CC BY 3.0 
+<p id>
+  <a title="By daPhyre [CC BY 3.0 
  (https://creativecommons.org/licenses/by/3.0
 )], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:CSS3_and_HTML5_logos_and_wordmarks.svg"><img width="64" alt="CSS3 and HTML5 logos and wordmarks" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/CSS3_and_HTML5_logos_and_wordmarks.svg/64px-CSS3_and_HTML5_logos_and_wordmarks.svg.png"></a>
- <a href="https://www.w3.org/html/logo/downloads/HTML5_sticker.png"><img width="64" src="https://www.w3.org/html/logo/downloads/HTML5_sticker.png"></a></p>
+ <a href="http://www.w3.org/html/logo/">
+ <a href="https://www.w3.org/html/logo/downloads/HTML5_sticker.png"><img width="64" src="https://www.w3.org/html/logo/downloads/HTML5_sticker.png"></a>
   <adress>
  <p>Posted by: Yrjö Almonkari</p>
- <p>e-mail: <a href="mailto:yrjoo.almonkari@gmail.com?Subject=Hello%20again" target="_top">yrjoo.almonkari@gmail.com</a></p>
+ <p>e-mail: <a href="mailto:yrjoo.almonkari@gmail.com?Subject=Hello%20again" target="_top">yrjoo.almonkari@gmail.com</a>
+  </adress>
+   <p>Copyright 2018</p>
+  </footer>
 <script>
   document.addEventListener("DOMContentLoaded", 
     ()=> {
@@ -134,15 +161,11 @@ new Vue({
 var app2 = new Vue({
   el: '#app-2',
   data: {
-    seen: true
+    seen: false
   }
 })
 }
 )
-  document.write('Ostatnia aktualizacja: ' + document.lastModified);
 </script>
-      </adress>
-   <p>Copyright 2018</p>
-  </footer>
 </body>
 </html>
