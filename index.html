@@ -1,4 +1,5 @@
-  <!DOCTYPE html>
+
+ <!DOCTYPE html>
  <html lang="pl-PL">
  <head>
    <title>My first Vue app</title>
@@ -8,26 +9,27 @@
  </head>
  <body bgcolor="white">
   <header>
+   
+  </header>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <!--<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>-->
   <!-- <script src="vue.js"></script>-->
    <script type="text/javascript" src="jscript.js"></script>
- <!-- pasek procentu zaladowania strony / pracy przegladarki -->
-   <div id="myProgress">
+ <!--<div id="myProgress">
    <div id="myBar">1%</div>
  <br>
  <button onclick="move()">Click Me</button> 
- </div>
-    <div id="app" v-bind:title="title">
-    {{ message }}
-  </div>
-      </header>
+ </div>-->
+   <!-- Napis "helo vue!" i data zaladowania strony -->
+   <div id="app" v-bind:title="title">
+     {{ message }}
+   </div>
    <div>
  <input type="button" value="Przycisk zmiany koloru tła na zielony" onclick="kolor('green');">
 <input type="button" value="Przycisk zmiany koloru tła na biały" onclick="kolor('white');">
 </div>
 <div id="todo-list">
-  <!-- the submit event will no longer reload the page -->
+  <!-- the submit event will no longer reload the page / Przycisk wyslij nie spowoduje odswierzenia strony. -->
   <form v-on:submit.prevent="addNewTodo">
     <label for="new-todo">dodaja coś</label>
     <input
@@ -48,12 +50,12 @@
     ></li>
  </ul>
 </div>
-  <!--Znikający napis-->
+  <!-- Znikający napis, opcja v-if -->
 <div id="app-2">
 <!--  <input type="button" value="...">  -->
  <span v-if="seen">...</span>
 </div>
-  <!--Tabela, docelowy pasek menu-->
+  <!-- Menu. -->
 <div id="tabela">
 </div>
   <hr>
@@ -63,19 +65,20 @@
     <button type="button" class="w3-btn w3-tiny w3-ripple w3-blue">Button</button>
   </div>
   <hr>
-  <!--Przesuwajacy sie napis, czerwona pozioma linia
+  <!-- Przesuwajacy sie napis, czerwona pozioma linia.
 <div id="opis">
  <p><marquee>Warszawa to nie jest ładne miasto.</marquee></p>
   </div>
   <hr color="red">-->
   <footer>
-<p id>
+<p id="w3">
+  <!-- Logotypy html5, css3, naklejka html5. -->
   <a title="By daPhyre [CC BY 3.0 
  (https://creativecommons.org/licenses/by/3.0
 )], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:CSS3_and_HTML5_logos_and_wordmarks.svg"><img width="64" alt="CSS3 and HTML5 logos and wordmarks" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/CSS3_and_HTML5_logos_and_wordmarks.svg/64px-CSS3_and_HTML5_logos_and_wordmarks.svg.png"></a>
   <a href="http://www.w3.org/html/logo/"></a>
  <a href="https://www.w3.org/html/logo/downloads/HTML5_sticker.png"><img width="64" src="https://www.w3.org/html/logo/downloads/HTML5_sticker.png"></a></p>
-  <adress>
+  <adress><!-- Stopka, kontakt, data ostatniej aktualizacji. -->
  <p>Posted by: Yrjö Almonkari</p>
  <p>e-mail: <a href="mailto:yrjoo.almonkari@gmail.com?Subject=Hello%20again" target="_top">yrjoo.almonkari@gmail.com</a>
   </adress>
@@ -139,7 +142,7 @@ new Vue({
 var app2 = new Vue({
   el: '#app-2',
   data: {
-    seen: false
+    seen: true
   }
 })
 }
