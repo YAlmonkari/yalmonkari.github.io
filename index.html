@@ -10,12 +10,12 @@
      <link rel="stylesheet" type="text/css" href="w3.css" /> -->
  </head>
  <body bgcolor="white">
-   <header></header>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script> -->
   <!-- <script src="vue.js"></script> -->
    <script type="text/javascript" src="jscript.js"></script>
- <!--Pasek ladowania strony z przyciskiem-->
+   <header>
+   <!--Pasek ladowania strony z przyciskiem-->
    <div id="myProgress">
    <div id="myBar">1%</div>
  <br>
@@ -25,6 +25,7 @@
    <div id="app" v-bind:title="title">
      {{ message }}
    </div>
+     </header>
    <div>
  <input type="button" value="Przycisk zmiany koloru tła na zielony" onclick="kolor('green');">
 <input type="button" value="Przycisk zmiany koloru tła na biały" onclick="kolor('white');">
@@ -32,7 +33,7 @@
 <div id="todo-list">
   <!-- Przycisk wyslij nie spowoduje odswierzenia strony. -->
   <form v-on:submit.prevent="addNewTodo">
-    <label for="new-todo">dodaja coś</label>
+    <label for="new-todo">dodaja cos</label>
     <input
        v-model="newTodoText"
        id="new-todo"
@@ -72,19 +73,21 @@
   </div>
   <hr color="red"> -->
 <p id="w3">
-  <!-- Logotypy html5, css3, naklejka html5. -->
+  <!-- Logotyp HTML5 i CSS3 -->
   <a title="By daPhyre [CC BY 3.0 
  (https://creativecommons.org/licenses/by/3.0
 )], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:CSS3_and_HTML5_logos_and_wordmarks.svg"><img width="64" alt="CSS3 and HTML5 logos and wordmarks" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/CSS3_and_HTML5_logos_and_wordmarks.svg/64px-CSS3_and_HTML5_logos_and_wordmarks.svg.png"></a>
-  <a href="http://www.w3.org/html/logo/"></a>
- <a href="https://www.w3.org/html/logo/downloads/HTML5_sticker.png"><img width="64" src="https://www.w3.org/html/logo/downloads/HTML5_sticker.png"></a></p>
-  <adress><!-- Stopka, kontakt, data ostatniej aktualizacji, copyright. -->
- <p>Posted by: Yrjö Almonkari</p>
+  <!-- Naklejka HTML5
+<a href="http://www.w3.org/html/logo/"></a>
+ <a href="https://www.w3.org/html/logo/downloads/HTML5_sticker.png"><img width="64" src="https://www.w3.org/html/logo/downloads/HTML5_sticker.png"></a> -->
+   </p>
+   <!-- Autor, kontakt, data ostatniej aktualizacji, copyright. -->
+  <adress>
+    <p>Posted by: Yrjö Almonkari</p>
  <p>e-mail: <a href="mailto:yrjoo.almonkari@gmail.com?Subject=Hello%20again" target="_top">yrjoo.almonkari@gmail.com</a>
   </adress>
 <script>
-  document.addEventListener("DOMContentLoaded", 
-    ()=> {
+
     var app = new Vue({
   el: '#app',
   data: {
@@ -150,7 +153,7 @@ var app2 = new Vue({
     </script>
    <footer>
      <script>
-     document.write('Ostatnia aktualizacja: ' + document.lastModified);
+     document.write('Ostatnia aktualizacja: ' + document.lastModified + ' GMT');
     </script>
          <p>© Copyright 2018 by Yrjö Almonkari</p>
   </footer>
