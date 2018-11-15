@@ -88,21 +88,21 @@
  <p>e-mail: <a href="mailto:yrjoo.almonkari@gmail.com?Subject=Hello%20again" target="_top">yrjoo.almonkari@gmail.com</a>
   </adress>
 <script>
-
-    var app = new Vue({
+var app = new Vue({
   el: '#app',
   data: {
     message: 'Hello Vue!',
     title: 'Strona załadowała się ' + new Date().toLocaleString()
   }
 })
+var app2 = new Vue({
+  el: '#app-2',
+  data: {
+    seen: true
+  }
     function kolor(kolor)
 {
 document.bgColor=kolor;
-}
-     function seen(value)
-{
-app2.seen=value;
 }
 Vue.component('todo-item', {
   template: '\
@@ -143,14 +143,8 @@ new Vue({
     }
   }
 })
-var app2 = new Vue({
-  el: '#app-2',
-  data: {
-    seen: true
-  }
 })
-}
-)
+})
     </script>
    <footer>
      <script>
