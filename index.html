@@ -10,7 +10,8 @@
      <link rel="stylesheet" type="text/css" href="w3.css" /> -->
  </head>
  <body bgcolor="white">
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<!-- Vue.js development version, includes helpful console warnings -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script> -->
   <!-- <script src="vue.js"></script> -->
    <script type="text/javascript" src="jscript.js"></script>
@@ -55,7 +56,8 @@
   <!-- Znikający napis, opcja v-if. -->
 <div id="app-2">
 <!--  <input type="button" value="...">  -->
- <span v-if="seen">...</span>
+ <input type="button" value="on" onklik="seen(1)"><input type="button" value="off" onklik="seen(0)">
+  <span v-if="seen">...</span>
 </div>
   <!-- Menu. -->
 <div id="tabela">
