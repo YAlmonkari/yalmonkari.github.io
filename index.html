@@ -5,9 +5,9 @@
    <title>My first Vue app</title>
      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
      <meta charset="UTF-8">
-   <!-- Bootstrap CSS -->
+   <!-- Bootstrap CSS --><!--
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-     <link rel="stylesheet" type="text/css" href="w3.css" />
+     <link rel="stylesheet" type="text/css" href="w3.css" /> -->
  </head>
  <body bgcolor="white">
    <header></header>
@@ -21,7 +21,7 @@
  <br>
  <button onclick="move()">Click me</button> 
  </div>
-   <!-- Napis "helo vue!" i data zaladowania strony -->
+   <!-- Napis "helo vue!" i data zaladowania strony. -->
    <div id="app" v-bind:title="title">
      {{ message }}
    </div>
@@ -30,7 +30,7 @@
 <input type="button" value="Przycisk zmiany koloru tła na biały" onclick="kolor('white');">
 </div>
 <div id="todo-list">
-  <!-- the submit event will no longer reload the page / Przycisk wyslij nie spowoduje odswierzenia strony. -->
+  <!-- Przycisk wyslij nie spowoduje odswierzenia strony. -->
   <form v-on:submit.prevent="addNewTodo">
     <label for="new-todo">dodaja coś</label>
     <input
@@ -51,7 +51,7 @@
     ></li>
  </ul>
 </div>
-  <!-- Znikający napis, opcja v-if -->
+  <!-- Znikający napis, opcja v-if. -->
 <div id="app-2">
 <!--  <input type="button" value="...">  -->
  <span v-if="seen">...</span>
@@ -78,7 +78,7 @@
 )], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:CSS3_and_HTML5_logos_and_wordmarks.svg"><img width="64" alt="CSS3 and HTML5 logos and wordmarks" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/CSS3_and_HTML5_logos_and_wordmarks.svg/64px-CSS3_and_HTML5_logos_and_wordmarks.svg.png"></a>
   <a href="http://www.w3.org/html/logo/"></a>
  <a href="https://www.w3.org/html/logo/downloads/HTML5_sticker.png"><img width="64" src="https://www.w3.org/html/logo/downloads/HTML5_sticker.png"></a></p>
-  <adress><!-- Stopka, kontakt, data ostatniej aktualizacji. -->
+  <adress><!-- Stopka, kontakt, data ostatniej aktualizacji, copyright. -->
  <p>Posted by: Yrjö Almonkari</p>
  <p>e-mail: <a href="mailto:yrjoo.almonkari@gmail.com?Subject=Hello%20again" target="_top">yrjoo.almonkari@gmail.com</a>
   </adress>
