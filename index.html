@@ -10,13 +10,13 @@
      <link rel="stylesheet" type="text/css" href="w3.css" />
  </head>
  <body bgcolor="white">
-   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+   <!--<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
    <!-- Vue.js development version, includes helpful console warnings 
    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
    <!-- production version, optimized for size and speed -->
-   <!--<script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
+   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
    <script type="text/javascript" src="jscript.js"></script>
-   <header>
+   <header></header>
    <!--Pasek ladowania strony z przyciskiem-->
    <div id="myProgress">
    <div id="myBar">1%</div>
@@ -25,8 +25,7 @@
    <!-- Napis "helo vue!" i data zaladowania strony. -->
    <div id="app" v-bind:title="title">
      {{ message }}
-   </div>
-     </header>
+     </div>
    <div>
  <input type="button" value="Przycisk zmiany koloru tła na zielony" onclick="kolor('green');">
 <input type="button" value="Przycisk zmiany koloru tła na biały" onclick="kolor('white');">
@@ -147,8 +146,8 @@ new Vue({
     }
   }
 })
-    }
-                              )
+})
+})
     </script><p>
      <script>
      document.write('Ostatnia aktualizacja: ' + document.lastModified + ' GMT');
