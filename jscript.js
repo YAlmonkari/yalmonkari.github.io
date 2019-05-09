@@ -9,11 +9,6 @@ var app = new Vue({
     title: 'Strona załadowała się ' + new Date().toLocaleString()
   }
 })
-var app2 = new Vue({
-  el: '#app-2',
-  data: {
-    seen: true
-  }
 Vue.component('todo-item', {
   template: '\
     <li>\
@@ -52,6 +47,4 @@ new Vue({
       this.newTodoText = ''
     }
   }
-})
-})
 })
