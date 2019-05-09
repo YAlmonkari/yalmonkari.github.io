@@ -36,37 +36,21 @@
        v-bind:key="todo.id"
        v-bind:title="todo.title"
        v-on:remove="todos.splice(index, 1)"
-       v-on:click="app2.seen = true"
     ></li>
  </ul>
 </div>
    <footer>
      <adress>
 <div id="footer">
-   <p>
-  <!-- Logotyp HTML5 i CSS3 -->
-  <a title="By daPhyre [CC BY 3.0 
- (https://creativecommons.org/licenses/by/3.0
-)], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:CSS3_and_HTML5_logos_and_wordmarks.svg"><img width="64" alt="CSS3 and HTML5 logos and wordmarks" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/CSS3_and_HTML5_logos_and_wordmarks.svg/64px-CSS3_and_HTML5_logos_and_wordmarks.svg.png"></a>
-  <!-- Naklejka HTML5
-<a href="http://www.w3.org/html/logo/"></a>
- <a href="https://www.w3.org/html/logo/downloads/HTML5_sticker.png"><img width="64" src="https://www.w3.org/html/logo/downloads/HTML5_sticker.png"></a> -->
-   </p>
-   <!-- Autor, kontakt, data ostatniej aktualizacji, copyright. -->
-  <p>Posted by: Yrjö Almonkari</p>
- <p>e-mail: <a href="mailto:yrjoo.almonkari@gmail.com?Subject=Hello%20again" target="_top">yrjoo.almonkari@gmail.com</a></p>
-</p>
          <p>© Copyright 2018 by Yrjö Almonkari</p>
-       <p>
-       <script>
+       <p><script>
      document.write('Ostatnia aktualizacja: ' + document.lastModified + ' GMT');
          </script>
        </p>
      </div>
   </adress>
   </footer>
-</body>
-<script>
+   <script>
     document.addEventListener("DOMContentLoaded", 
     ()=> {
 var app = new Vue({
@@ -127,4 +111,5 @@ new Vue({
 })
 })}
     </script>
+</body>
 </html>
