@@ -1,9 +1,9 @@
-    function kolor(kolor)
+  document.addEventListener("DOMContentLoaded", 
+    ()=> {
+function kolor(kolor)
 {
 document.bgColor=kolor;
 }
-  document.addEventListener("DOMContentLoaded", 
-    ()=> {
 var app = new Vue({
   el: '#app',
   data: {
