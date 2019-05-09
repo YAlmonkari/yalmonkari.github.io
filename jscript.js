@@ -2,8 +2,6 @@
 {
 document.bgColor=kolor;
 }
-    document.addEventListener("DOMContentLoaded", 
-    ()=> {
 var app = new Vue({
   el: '#app',
   data: {
@@ -56,4 +54,4 @@ new Vue({
   }
 })
 })
-})}
+})
