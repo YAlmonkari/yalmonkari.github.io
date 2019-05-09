@@ -1,5 +1,3 @@
-  document.addEventListener("DOMContentLoaded", 
-    ()=> {
 function kolor(kolor)
 {
 document.bgColor=kolor;
@@ -50,4 +48,3 @@ new Vue({
     }
   }
 })
-  }
