@@ -46,5 +46,8 @@ new Vue({
       })
       this.newTodoText = ''
     }
+    showTodo: {
+   alert ('showtodo'); 
+  }
   }
 })
