@@ -19,7 +19,7 @@
 </div>
 <div id="todo-list">
   <!-- Przycisk wyslij nie spowoduje odswierzenia strony. -->
- <!-- <form v-on:submit.prevent="addNewTodo"> -->
+  <form v-on:submit.prevent="addNewTodo">
     <label for="new-todo">dodaja cos</label>
     <input
        v-model="newTodoText"
