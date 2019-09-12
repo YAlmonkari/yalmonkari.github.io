@@ -10,3 +10,6 @@ body{
 button {
     text-align:center;
 }
+li {
+    hoover: pointer;
+}
