@@ -11,5 +11,5 @@ button {
     text-align:center;
 }
 li {
-    hover: cursor: pointer;
+    cursor: pointer;
 }
