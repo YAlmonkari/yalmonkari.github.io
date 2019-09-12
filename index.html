@@ -29,12 +29,13 @@
      <button>Dodaj</button>
    </form>
    <ul>
-     <li onclick="index2.html"
+     <li
        is="todo-item"
        v-for="(todo, index) in todos"
        v-bind:key="todo.id"
        v-bind:title="todo.title"
        v-on:remove="todos.splice(index, 1)"
+       @click="index2.html"
     ></li>
  </ul>
 </div>
