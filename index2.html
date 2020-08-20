@@ -3,6 +3,10 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
   </head>
 <body>
+   <div>
+ <input type="button" value="Przycisk zmiany koloru tła na zielony" onclick="kolor('green');">
+<input type="button" value="Przycisk zmiany koloru tła na biały" onclick="kolor('white');">
+</div>
   <div id="main">
     <h1>{{ title }}</h1>
     <ul id="example-1">
@@ -10,7 +14,11 @@
     </ul>
   </div>
 </body>
-<script>
+<script> 
+function kolor(kolor)
+{
+document.bgColor=kolor;
+}
   document.addEventListener("DOMContentLoaded", 
     ()=> {
       new Vue({
