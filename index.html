@@ -14,7 +14,7 @@
       <li v-for="item in items" v-on:click="seen = !seen" v-if="seenMenu"> {{ item }} </li>
     </ul>
     <transition name="fade">
-  <span v-if="seen">...some content{{ item }}</span>
+  <span v-if="seen">...some content{{ content[item] }}</span>
     </transition>
 </div>
 </body>
@@ -29,6 +29,11 @@ document.bgColor=kolor;
         el: '#main',
         data: {
           title: 'Tytuł',
+          content: [
+            1,
+            2,
+            3
+            ],
           items: [
             "raz",
             "dwa",
