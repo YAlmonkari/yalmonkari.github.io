@@ -11,10 +11,10 @@
   <div id="main">
     <h1>{{ title }}</h1>
     <ul id="example-1">
-      <li v-for="item in items" v-on:click="seen = !seen"> {{ item }} </li>
+      <li v-for="item in items" v-on:click="seen[item] = !seen"> {{ item }} </li>
     </ul>
      <transition name="fade">
-  <span v-if="seen">some content of {{ item }} </span>
+  <span v-if="seen[1]">some content</span>
     </transition>
 </div>
 </body>
@@ -34,7 +34,11 @@ document.bgColor=kolor;
             "dwa",
             "trzy"
           ],
-          seen: false
+          seen: [
+            [1,false],
+            [2,false],
+            [3,false]
+            ]
         }
       })
     }
