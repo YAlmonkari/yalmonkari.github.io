@@ -9,11 +9,11 @@
 <input type="button" value="Przycisk zmiany koloru tła na biały" onclick="kolor('white');">
 </div>
   <div id="main">
-         <transition name="fade">
     <h1>{{ title }}</h1>
     <ul id="example-1">
       <li v-for="item in items" v-on:click="seen = !seen"> {{ item }} </li>
     </ul>
+    <transition name="fade">
   <span v-if="seen">{{ item }}</span>
     </transition>
 </div>
