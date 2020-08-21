@@ -1,5 +1,5 @@
 body {
-    transition: color: 2s;
+    transition: background-color: 2s;
     transition-delay: 1s;
     margin: 0px;
     padding: 0px;
