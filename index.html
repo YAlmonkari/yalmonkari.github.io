@@ -9,7 +9,7 @@
 <input type="button" value="Przycisk zmiany koloru tła na biały" onclick="kolor('white');">
 </div>
   <div id="main">
-    <h1 v-bind:title="message">{{ title }}</h1>
+    <h1><span v-bind:title="message">{{ title }}</span></h1>
     <ul id="example-1">
       <li v-for="item in items" v-on:click="seen = !seen"> {{ item }} </li>
     </ul>
