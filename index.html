@@ -14,7 +14,7 @@
       <li v-for="item in items" v-on:click="seen = !seen" v-if="seenMenu"> {{ item }} </li>
     </ul>
     <transition name="fade">
-  <span v-if="seen">...some content</span>
+  <span v-if="seen">...some content {{ page[item] }}</span>
     </transition>
 </div>
 </body>
@@ -34,6 +34,11 @@ document.bgColor=kolor;
             "dwa",
             "trzy"
           ],
+          page: [
+            "1",
+            "2",
+            "3"
+            ],
           seen: false,
           seenMenu: true
         }
