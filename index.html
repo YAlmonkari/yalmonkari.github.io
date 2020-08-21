@@ -14,7 +14,7 @@
       <li v-for="item in items" v-on:click="seen = !seen"> {{ item }} </li>
     </ul>
      <transition name="fade">
-  <span v-if="seen">Now you see me</span>
+  <span v-if="seen">some content of {{ item }} </span>
     </transition>
 </div>
 </body>
