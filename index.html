@@ -11,7 +11,7 @@
   <div id="main">
     <h1><span v-bind:title="message" v-on:click="seenMenu = !seenMenu">{{ title }}</span></h1>
     <ul id="example-1">
-      <li v-for="item in items" v-on:click="seen = !seen" v-if="seenMenu> {{ item }} </li>
+      <li v-for="item in items" v-on:click="seen = !seen" v-if="seenMenu"> {{ item }} </li>
     </ul>
     <transition name="fade">
   <span v-if="seen">...some content</span>
