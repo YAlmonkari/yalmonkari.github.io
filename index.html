@@ -11,9 +11,13 @@
   <div id="main">
     <h1>{{ title }}</h1>
     <ul id="example-1">
-      <li v-for="item in items"><a href="{{ item }.html"> {{ item }} </a></li>
+      <li v-for="item in items" v-on:click="seen = !seen"> {{ item }} </li>
     </ul>
   </div>
+  <div id="app-3">
+  <span v-if="seen">Now you see me {{ item }}</span>
+     <p v-if="seen">hello</p>
+</div>
 </body>
 <script> 
 function kolor(kolor)
@@ -33,6 +37,12 @@ document.bgColor=kolor;
           ]
         }
       })
+    var app3 = new Vue({
+  el: '#app-3',
+  data: {
+    seen: true
+  }
+})
     }
   )
 </script>
