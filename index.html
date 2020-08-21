@@ -9,7 +9,7 @@
 <input type="button" value="Przycisk zmiany koloru tła na biały" onclick="kolor('white');">
 </div>
   <div id="main">
-    <h1><span v-bind:title="message" v-on:click="seenMenu = !seenMenu">{{ title }}</span></h1>
+    <h1><span v-on:click="seenMenu = !seenMenu">{{ title }}</span></h1>
     <ul id="example-1">
       <li v-for="item in items" v-on:click="seen = !seen" v-if="seenMenu"> {{ item }} </li>
     </ul>
@@ -28,7 +28,6 @@ document.bgColor=kolor;
       var app = new Vue({
         el: '#main',
         data: {
-          message: 'You loaded this page on ' + new Date().toLocaleString(),
           title: 'Tytuł',
           items: [
             "raz",
