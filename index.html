@@ -14,7 +14,7 @@
       <li v-for="item in items" v-on:click="seen = !seen"> {{ item }} </li>
     </ul>
   </div>
-  <div id="demo">
+  <div id="main">
      <transition name="fade">
   <span v-if="seen">Now you see me</span>
     </transition>
@@ -35,15 +35,10 @@ document.bgColor=kolor;
             "raz",
             "dwa",
             "trzy"
-          ]
+          ],
+          seen: false
         }
       })
-    new Vue({
-  el: '#demo',
-  data: {
-    show: false
-  }
-})
     }
   )
 </script>
