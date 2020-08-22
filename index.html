@@ -13,12 +13,10 @@
     <ul id="example-1">
       <li v-for="item in items" v-on:click="seen = !seen" v-if="seenMenu"> {{ item }} </li>
     </ul>
-</div>
-  <div>
     <transition name="fade">
   <span v-if="seen">...some content</span>
     </transition>
-  </div>
+    </div> 
 </body>
 <script> 
 function kolor(kolor)
